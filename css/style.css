@@ -195,20 +195,3 @@ table tbody tr:last-child td {
 .all_sum{
   background-color: orange;
 }
-@media (max-width: 768px) {
-  #wrap {
-    width: 100%;
-  }
-  .check{
-    width:90%;
-    font-size:11px;
-  }
-  .t1,
-  .t2,
-  .t3,
-  .t4,
-  .t5{
-    width:95%;
-    margin:30px auto;
-  }
-}
