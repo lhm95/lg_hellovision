@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <title>LG HelloVision</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="js/main.js"></script>
+</head>
+
+<body>
+    <div id="wrap">
+        <div class="logo">
+            <img src="images/logo.png" alt="logo">
+        </div>
+        <button onClick="window.location.reload()" class="reload">
+            <img src="images/refresh.png" alt="새로고침">
+        </button>
+        <div class="check">
+            <p class="date">2020.04.09</p>
+            <label for="t1">헬로 인터넷 + TV 동시가입</label>
+            <input type="checkbox" onChange="show01()" id="t1" checked>
+            <label for="t2">헬로 인터넷</label>
+            <input type="checkbox" onChange="show02()" id="t2" checked>
+            <label for="t3">헬로 인터넷 (후번들)</label>
+            <input type="checkbox" onChange="show03()" id="t3">
+            <label for="t4">헬로 TV</label>
+            <input type="checkbox" onChange="show04()" id="t4">
+        </div>
+        <div class="t1 on">
+            
+            <div class="titleArea">헬로 인터넷 + TV 동시가입 (3년 약정)</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th width="12%">상품</th>
+                        <th width="8%">속도</th>
+                        <th width="10%">헬로 TV</th>
+                        <th width="33%" colspan="2">3년 약정 (인터넷 + UHD)</th>
+                        <th width="16.5%">설치비</th>
+                        <th width="4%">회선수</th>
+                        <th width="16.5%">월 매출</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>플래티넘기가 (결합)</th>
+                        <th>1 Gbps</th>
+                        <th>UHD 프리미엄</th>
+                        <td class="t1_r1_01">21,120</td>
+                        <td class="t1_r1_02">14,300</td>
+                        <td class="t1_r1_03">0</td>
+                        <td><input type="text" onChange="t1_01(), t1_sum(), all_sum(), all_sum2()" id="t1_01"></td>
+                        <td class="t1_r1_05">0</td>
+                    </tr>
+                    <tr>
+                        <th>플래티넘기가 (결합)</th>
+                        <th>1 Gbps</th>
+                        <th>UHD 베이직</th>
+                        <td class="t1_r2_01">21,120</td>
+                        <td class="t1_r2_02">12,100</td>
+                        <td class="t1_r2_03">0</td>
+                        <td><input type="text" onChange="t1_02(), t1_sum(), all_sum(), all_sum2()" id="t1_02"></td>
+                        <td class="t1_r2_05">0</td>
+                    </tr>
+                    <tr>
+                        <th>기가라이트 (결합)</th>
+                        <th>500 Mbps</th>
+                        <th>UHD 프리미엄</th>
+                        <td class="t1_r3_01">20,060</td>
+                        <td class="t1_r3_02">14,300</td>
+                        <td class="t1_r3_03">22,000</td>
+                        <td><input type="text" onChange="t1_03(), t1_sum(), all_sum(), all_sum2()" id="t1_03"></td>
+                        <td class="t1_r3_05">0</td>
+                    </tr>
+                    <tr>
+                        <th>기가라이트 (결합)</th>
+                        <th>500 Mbps</th>
+                        <th>UHD 베이직</th>
+                        <td class="t1_r4_01">20,060</td>
+                        <td class="t1_r4_02">12,100</td>
+                        <td class="t1_r4_03">22,000</td>
+                        <td><input type="text" onChange="t1_04(), t1_sum(), all_sum(), all_sum2()" id="t1_04"></td>
+                        <td class="t1_r4_05">0</td>
+                    </tr>
+                    <tr>
+                        <th>광랜 (결합)</th>
+                        <th>160 Mbps</th>
+                        <th>UHD 프리미엄</th>
+                        <td class="t1_r5_01">17,420</td>
+                        <td class="t1_r5_02">14,300</td>
+                        <td class="t1_r5_03">44,000</td>
+                        <td><input type="text" onChange="t1_05(), t1_sum(), all_sum(), all_sum2()" id="t1_05"></td>
+                        <td class="t1_r5_05">0</td>
+                    </tr>
+                    <tr>
+                        <th>광랜 (결합)</th>
+                        <th>160 Mbps</th>
+                        <th>UHD 베이직</th>
+                        <td class="t1_r6_01">17,420</td>
+                        <td class="t1_r6_02">12,100</td>
+                        <td class="t1_r6_03">44,000</td>
+                        <td><input type="text" onChange="t1_06(), t1_sum(), all_sum(), all_sum2()" id="t1_06"></td>
+                        <td class="t1_r6_05">0</td>
+                    </tr>
+                    <tr>
+                        <th>광랜 라이트 (결합)</th>
+                        <th>100 Mbps</th>
+                        <th>UHD 프리미엄</th>
+                        <td class="t1_r7_01">14,250</td>
+                        <td class="t1_r7_02">14,300</td>
+                        <td class="t1_r7_03">44,000</td>
+                        <td><input type="text" onChange="t1_07(), t1_sum(), all_sum(), all_sum2()" id="t1_07"></td>
+                        <td class="t1_r7_05">0</td>
+                    </tr>
+                    <tr>
+                        <th>광랜 라이트 (결합)</th>
+                        <th>100 Mbps</th>
+                        <th>UHD 베이직</th>
+                        <td class="t1_r8_01">14,250</td>
+                        <td class="t1_r8_02">12,100</td>
+                        <td class="t1_r8_03">44,000</td>
+                        <td><input type="text" onChange="t1_08(), t1_sum(), all_sum(), all_sum2()" id="t1_08"></td>
+                        <td class="t1_r8_05">0</td>
+                    </tr>
+                    <tr>
+                        <th>계</th>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td class="t1_sum">0</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="t2 on">
+            <div class="radioArea">
+                <label for="t2_r2">무약정</label>
+                <input type="radio" name="t2" id="t2_r2" onclick="t2_l2()">
+                <label for="t2_r3">3년 약정</label>
+                <input type="radio" name="t2" id="t2_r3" onclick="t2_l3()">
+                <label for="t2_r4">결합 (인터넷 + UHD)</label>
+                <input type="radio" name="t2" id="t2_r4" onclick="t2_l4()">
+            </div>
+            <div class="titleArea">헬로 인터넷</div>
+            <table>
+                <thead>
+                    <th>상품</th>
+                    <th width="16.5%" class="t2_l2">무약정</th>
+                    <th width="16.5%" class="t2_l3">3년 약정</th>
+                    <th width="16.5%" class="t2_l4">결합 (인터넷 + UHD)</th>
+                    <th width="16.5%">설치비</th>
+                    <th width="4%">회선수</th>
+                    <th width="16.5%">월 매출</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>플래티넘기가</th>
+                        <td class="t2_r1_01 t2_l2">44,000</td>
+                        <td class="t2_r1_02 t2_l3">30,800</td>
+                        <td class="t2_r1_03 t2_l4">21,120</td>
+                        <td class="t2_r1_04">0</td>
+                        <td><input type="text" onChange="t2_01(), t2_sum(), all_sum(), all_sum2()" id="t2_01"></td>
+                        <td class="t2_r1_05">0</td>
+                    </tr>
+                    <tr>
+                        <th>기가라이트</th>
+                        <td class="t2_r2_01 t2_l2">41,800</td>
+                        <td class="t2_r2_02 t2_l3">29,260</td>
+                        <td class="t2_r2_03 t2_l4">20,060</td>
+                        <td class="t2_r2_04">0</td>
+                        <td><input type="text" onChange="t2_02(), t2_sum(), all_sum(), all_sum2()" id="t2_02"></td>
+                        <td class="t2_r2_05">0</td>
+                    </tr>
+                    <tr>
+                        <th>광랜</th>
+                        <td class="t2_r3_01 t2_l2">36,300</td>
+                        <td class="t2_r3_02 t2_l3">25,410</td>
+                        <td class="t2_r3_03 t2_l4">17,420</td>
+                        <td class="t2_r3_04">22,000</td>
+                        <td><input type="text" onChange="t2_03(), t2_sum(), all_sum(), all_sum2()" id="t2_03"></td>
+                        <td class="t2_r3_05">0</td>
+                    </tr>
+                    <tr>
+                        <th>광랜 라이트</th>
+                        <td class="t2_r4_01 t2_l2">29,700</td>
+                        <td class="t2_r4_02 t2_l3">20,790</td>
+                        <td class="t2_r4_03 t2_l4">14,250</td>
+                        <td class="t2_r4_04">22,000</td>
+                        <td><input type="text" onChange="t2_04(), t2_sum(), all_sum(), all_sum2()" id="t2_04"></td>
+                        <td class="t2_r4_05">0</td>
+                    </tr>
+                    <tr>
+                        <th>계</th>
+                        <td class="t2_l2">-</td>
+                        <td class="t2_l3">-</td>
+                        <td class="t2_l4">-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td class="t2_sum">0</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="t3">
+            <div class="radioArea">
+                <label for="t3_r2">결합 (인터넷 + UHD)</label>
+                <input type="radio" name="t3" id="t3_r2" onclick="t3_l2()">
+                <label for="t3_r3">결합 (인터넷 + HD)</label>
+                <input type="radio" name="t3" id="t3_r3" onclick="t3_l3()">
+            </div>
+            <div class="titleArea">헬로 인터넷 (후번들)</div>
+            <table>
+                <thead>
+                    <th>상품</th>
+                    <th width="16.5%" class="t3_l2">결합 (인터넷 + UHD)</th>
+                    <th width="16.5%" class="t3_l3">결합 (인터넷 + HD)</th>
+                    <th width="16.5%">설치비</th>
+                    <th width="4%">회선수</th>
+                    <th width="16.5%">월 매출</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>플래티넘기가</th>
+                        <td class="t3_r1_01 t3_l2">24,200</td>
+                        <td class="t3_r1_02 t3_l3">21,120</td>
+                        <td class="t3_r1_03">0</td>
+                        <td><input type="text" onChange="t3_01(), t3_sum(), all_sum(), all_sum2()" id="t3_01"></td>
+                        <td class="t3_r1_05">0</td>
+                    </tr>
+                    <tr>
+                        <th>기가라이트</th>
+                        <td class="t3_r2_01 t3_l2">22,990</td>
+                        <td class="t3_r2_02 t3_l3">20,060</td>
+                        <td class="t3_r2_03">0</td>
+                        <td><input type="text" onChange="t3_02(), t3_sum(), all_sum(), all_sum2()" id="t3_02"></td>
+                        <td class="t3_r2_05">0</td>
+                    </tr>
+                    <tr>
+                        <th>광랜</th>
+                        <td class="t3_r3_01 t3_l2">19,960</td>
+                        <td class="t3_r3_02 t3_l3">17,420</td>
+                        <td class="t3_r3_03">22,000</td>
+                        <td><input type="text" onChange="t3_03(), t3_sum(), all_sum(), all_sum2()" id="t3_03"></td>
+                        <td class="t3_r3_05">0</td>
+                    </tr>
+                    <tr>
+                        <th>광랜 라이트</th>
+                        <td class="t3_r4_01 t3_l2">16,330</td>
+                        <td class="t3_r4_02 t3_l3">14,250</td>
+                        <td class="t3_r4_03">22,000</td>
+                        <td><input type="text" onChange="t3_04(), t3_sum(), all_sum(), all_sum2()" id="t3_04"></td>
+                        <td class="t3_r4_05">0</td>
+                    </tr>
+                    <tr>
+                        <th>계</th>
+                        <td class="t3_l2">-</td>
+                        <td class="t3_l3">-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td class="t3_sum">0</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="t4">
+            <div class="radioArea">
+                <label for="t4_r2">3년 약정</label>
+                <input type="radio" name="t4" id="t4_r2" onclick="t4_l2()">
+                <label for="t4_r3">결합 (인터넷 + UHD)</label>
+                <input type="radio" name="t4" id="t4_r3" onclick="t4_l3()">
+            </div>
+            <div class="titleArea">헬로 TV</div>
+            <table>
+                <thead>
+                    <th>상품</th>
+                    <th width="16.5%" class="t4_l2">3년 약정</th>
+                    <th width="16.5%" class="t4_l3">결합 (인터넷 + UHD)</th>
+                    <th width="16.5%">설치비</th>
+                    <th width="4%">회선수</th>
+                    <th width="16.5%">월 매출</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>UHD 프리미엄</th>
+                        <td class="t4_r1_01 t4_l2">16,500</td>
+                        <td class="t4_r1_02 t4_l3">14,300</td>
+                        <td class="t4_r1_03">22,000</td>
+                        <td><input type="text" onChange="t4_01(), t4_sum(), all_sum(), all_sum2()" id="t4_01"></td>
+                        <td class="t4_r1_05">0</td>
+                    </tr>
+                    <tr>
+                        <th>UHD 베이직</th>
+                        <td class="t4_r2_01 t4_l2">14,300</td>
+                        <td class="t4_r2_02 t4_l3">12,100</td>
+                        <td class="t4_r2_03">22,000</td>
+                        <td><input type="text" onChange="t4_02(), t4_sum(), all_sum(), all_sum2()" id="t4_02"></td>
+                        <td class="t4_r2_05">0</td>
+                    </tr>
+                    <tr>
+                        <th>HD 이코노미</th>
+                        <td class="t4_r3_01 t4_l2">9,900</td>
+                        <td class="t4_r3_02 t4_l3">7,700</td>
+                        <td class="t4_r3_03">22,000</td>
+                        <td><input type="text" onChange="t4_03(), t4_sum(), all_sum(), all_sum2()" id="t4_03"></td>
+                        <td class="t4_r3_05">0</td>
+                    </tr>
+                    <tr>
+                        <th>+1 HD 베이직</th>
+                        <td class="t4_r4_01 t4_l2">7,150</td>
+                        <td class="t4_l3">-</td>
+                        <td class="t4_r4_03">22,000</td>
+                        <td><input type="text" onChange="t4_04(), t4_sum(), all_sum(), all_sum2()" id="t4_04"></td>
+                        <td class="t4_r4_05">0</td>
+                    </tr>
+                    <tr>
+                        <th>+1 HD 이코노미</th>
+                        <td class="t4_r5_01 t4_l2">4,950</td>
+                        <td class="t4_l3">-</td>
+                        <td class="t4_r5_03">22,000</td>
+                        <td><input type="text" onChange="t4_05(), t4_sum(), all_sum(), all_sum2()" id="t4_05"></td>
+                        <td class="t4_r5_05">0</td>
+                    </tr>
+                    <tr>
+                        <th>계</th>
+                        <td class="t4_l2">-</td>
+                        <td class="t4_l3">-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td class="t4_sum">0</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="t5">
+            <table>
+                <tr>
+                    <th style="width:40%">총 매출 VAT 포함</th>
+                    <td class="all_sum">0</td>
+                </tr>
+            </table>
+        </div>
+        <p class="info">
+            실제 금액과 차이가 있을 수 있습니다.<br/>참고용으로 사용 부탁드립니다.
+        </p>
+    </div>
+</body>
+
+</html>
